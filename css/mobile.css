@@ -1,0 +1,91 @@
+@media only screen and (max-width: 575.9px) {
+    .container{
+        width: 90%;
+    }
+    .col-sm-10{
+        width: 83%;
+    }
+    .col-sm-12{
+        width: 100%;
+    }
+    .col-sm-8{
+        width: 66%;
+    }
+    .navbar-first{
+      font-size: medium;
+ 
+    }
+    .col-sm-4{
+        width:34%
+    }
+    .myNavbar .navbar-header{
+        width: 100%;
+    }
+    .leaf-chain-lg{
+        width: 100%;
+    }
+    .col-sm-2{
+        width: 17%;
+    }
+    .col-sm-2>button{
+        margin-left: 20%;
+    }
+    .d-sm-none{
+        display: none
+    }
+    .text-sm-center{
+        text-align: center;
+    }
+    .mb-sm-3{
+        margin-bottom: 10%;
+    }
+    .mt-sm-5{
+        margin-top: 15%;
+    }
+    .p-sm-0{
+        padding: 0% !important;
+    }
+    .flex-sm-column-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    footer ul{
+        margin-left:0;
+        padding-left: 0;
+    }
+    .me-ms-5{
+        margin-right: 20px;
+    }
+    .myModal-content input{
+        width: 90%;
+    }
+    .tab-menu{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .apply-form.p-5{
+        padding: 0 !important;
+        margin-bottom: 5%;
+    }
+    .toggle-button{
+        font-size: 25px;
+    position: relative;
+    right: 30%;
+    top: 15%
+    }
+    .mehsullarimiz .card{
+        margin-bottom: 5%;
+    }
+    .apply-icons a{
+        width: 45px;
+    }
+}
+@media only screen and (max-width: 767.9px) {
+    footer ul{
+        margin-left:0;
+        padding-left: 0;
+    }
+    .mehsullarimiz .card{
+        margin-bottom: 5%;
+    }
+}
