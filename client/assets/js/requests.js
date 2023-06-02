@@ -1,14 +1,15 @@
-import axios from "axios";
+// import axios from "axios";
+const axios = require("axios");
 
 const baseUrl = "http://localhost:4040";
 
-export const createProduct = async (formData) => {
-  await axios
-    .post(`${baseUrl}/`, formData)
+const getProducts = async () => {
+  return await axios
+    .get(baseUrl)
     .then((response) => {
-      console.log(response.data);
+      return response.data;
     })
     .catch((error) => {
-      console.error(error);
+      console.log(error);
     });
 };

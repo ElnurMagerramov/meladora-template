@@ -6,14 +6,13 @@ const parentPath = path.join(__dirname, "..");
 
 exports.createProduct = async (req, res) => {
   try {
-    console.log(req.body)
     const { name, price } = req.body;
     const product = await Product.create(
-      //   {
-      //   name,
-      //   price,
-      //   image: req.file.filename,
-      // }
+      {
+      name,
+      price,
+      image: req.file.filename,
+    }
     );
     res.status(201).json(product);
   } catch (error) {

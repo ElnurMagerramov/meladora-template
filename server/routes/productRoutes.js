@@ -9,10 +9,10 @@ const router = express.Router();
 router.route("/").get(productController.getAllProducts);
 router
   .route("/")
-  .post( productController.createProduct);
+  .post(upload.single("image"), productController.createProduct);
 router
   .route("/:id")
-  .put(upload.single("imageFile"), productController.updateProduct);
+  .put(upload.single("image"), productController.updateProduct);
 router.route("/:id").delete(productController.deleteProduct);
 
 module.exports = router;
