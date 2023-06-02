@@ -1,4 +1,5 @@
 const express = require("express");
+const upload = require("../middlewares/uploadMiddleware");
 const productController = require("../controllers/productController");
 
 // variables
@@ -8,10 +9,10 @@ const router = express.Router();
 router.route("/").get(productController.getAllProducts);
 router
   .route("/")
-  .post(upload.single("imageFile"), productController.createBanner);
+  .post( productController.createProduct);
 router
   .route("/:id")
-  .put(upload.single("imageFile"), productController.updateBanner);
-router.route("/:id").delete(productController.deleteBanner);
+  .put(upload.single("imageFile"), productController.updateProduct);
+router.route("/:id").delete(productController.deleteProduct);
 
 module.exports = router;
