@@ -45,7 +45,9 @@
         />
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Product price</label>
+        <label for="exampleInputEmail1" class="form-label"
+          >Product price:
+        </label>
         <input
           type="number"
           name="price"
@@ -55,7 +57,12 @@
           aria-describedby="emailHelp"
         />
       </div>
-      <button type="submit" class="btn btn-primary" form="product">
+      <div class="mb-3">
+        <label for="categories" class="form-label">categories: </label>
+        <select class="form-select" id="categories"></select>
+      </div>
+
+      <button type="submit" class="btn btn-primary form-control" form="product">
         Submit
       </button>
     </form>
@@ -64,6 +71,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="../assets/js/requests.js"></script>
+    <script type="module" src="../assets/js/requests.js"></script>
+    <script type="module" src="../assets/js/products.js"></script>
   </body>
 </html>
