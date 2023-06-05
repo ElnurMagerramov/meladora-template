@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const productRoutes = require("./routes/productRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 
 // variables
 const app = express();
@@ -32,6 +33,7 @@ app.use("/public/uploads", express.static("uploads"));
 
 // routes
 app.use("/", productRoutes);
+app.use("/categories", categoryRoutes);
 
 app.listen(PORT, () => {
   console.log(`app is runing at ${PORT} port`);
