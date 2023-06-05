@@ -1,14 +1,14 @@
-import { getProducts } from "./requests.js";
+import { getCategories, getProducts } from "./requests.js";
 
 let products = document.querySelector("#products");
 
 getProducts().then((data) => {
   data.map(
-    (product, index) =>
+    (product) =>
       (products.innerHTML += `
         <div
           class="card border-0 col-lg-2 col-md-3 col-sm-12 tab-menu-item active"
-          data-number="${index}"
+          data-number="${product.category}"
          >
           <img
             src="../server/public/uploads/${product.image}"
@@ -24,4 +24,15 @@ getProducts().then((data) => {
         </div>
         `)
   );
+});
+
+let select = document.getElementById("categories");
+
+getCategories().then((categories) => {
+  categories.map((category) => {
+    let option = document.createElement("option");
+    option.value = category._id;
+    option.text = category.name;
+    select.appendChild(option);
+  });
 });
